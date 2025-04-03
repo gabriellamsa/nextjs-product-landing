@@ -3,7 +3,11 @@ import Link from "next/link";
 import { FaShoppingBag } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
 
-export const Navbar = () => {
+type Props = {
+  openNav: () => void;
+};
+
+export const Navbar = ({ openNav }: Props) => {
   return (
     <div className="transition-all duration-200 h-[12vh] z-[100] fixed w-full bg-pink-400">
       <div className="flex items-center h-full sm:w-[80%] w-[90%] mx-auto relative">
@@ -35,7 +39,10 @@ export const Navbar = () => {
             <span className="relative">Buy Now</span>
           </a>
 
-          <HiBars3BottomRight className="w-8 h-8 cursor-pointer text-white lg:hidden" />
+          <HiBars3BottomRight
+            onClick={openNav}
+            className="w-8 h-8 cursor-pointer text-white lg:hidden"
+          />
         </div>
       </div>
     </div>
