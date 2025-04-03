@@ -1,5 +1,7 @@
+"use client";
 import { navLinks } from "@/app/constant/constant";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
 
@@ -8,8 +10,23 @@ type Props = {
 };
 
 export const Navbar = ({ openNav }: Props) => {
+  const [navBg, setNavBg] = useState(false);
+  useEffect(() => {
+    const handler = () => {
+      if (window.scrollY >= 90) setNavBg(true);
+      else setNavBg(false);
+    };
+    window.addEventListener("scroll", handler);
+
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
+
   return (
-    <div className="transition-all duration-200 h-[12vh] z-[100] fixed w-full bg-pink-400">
+    <div
+      className={`transition-all ${
+        navBg ? "bg-pink-500" : "fixed"
+      } duration-200 h-[12vh] z-[100] fixed w-full bg-pink-400`}
+    >
       <div className="flex items-center h-full sm:w-[80%] w-[90%] mx-auto relative">
         {/* LOGO */}
         <div className="absolute left-0 text-white font-bold text-2xl">
