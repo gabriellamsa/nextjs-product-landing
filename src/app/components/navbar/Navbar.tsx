@@ -25,8 +25,8 @@ export const Navbar = ({ openNav }: Props) => {
   return (
     <div
       className={`transition-all ${
-        navBg ? "bg-pink-500" : "fixed"
-      } duration-200 h-[12vh] z-[100] fixed w-full bg-pink-400`}
+        navBg ? "bg-pink-400" : "fixed"
+      } duration-200 h-[12vh] z-[100] fixed w-full`}
     >
       <div className="flex items-center h-full sm:w-[80%] w-[90%] mx-auto relative">
         {/* LOGO */}
@@ -51,7 +51,7 @@ export const Navbar = ({ openNav }: Props) => {
         <div className="absolute right-0 flex items-center space-x-4">
           <a
             href="#_"
-            className="inline-flex items-center justify-center px-5 py-2.5 text-base font-medium text-center text-white border border-emerald-500 rounded-lg shadow-sm cursor-pointer hover:text-gray-600 bg-gradient-to-br from-lime-500 via-emerald-500 to-emerald-500 whitespace-nowrap"
+            className="inline-flex items-center justify-center px-5 py-2.5 text-base text-center text-white border border-emerald-500 rounded-lg shadow-sm cursor-pointer hover:text-gray-600 bg-gradient-to-br from-lime-500 via-emerald-500 to-emerald-500 whitespace-nowrap"
           >
             <FaShoppingBag className="mr-3 w-5 h-5" />
             <span className="relative">Buy Now</span>
