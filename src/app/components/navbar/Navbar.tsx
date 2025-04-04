@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import { ThemeToggle } from "../helper/ThemeToggle";
 
 type Props = {
   openNav: () => void;
@@ -55,6 +56,7 @@ export const Navbar = ({ openNav }: Props) => {
             <FaShoppingBag className="mr-3 w-5 h-5" />
             <span className="relative">Buy Now</span>
           </a>
+          <ThemeToggle />
 
           <HiBars3BottomRight
             onClick={openNav}
