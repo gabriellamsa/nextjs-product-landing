@@ -1,6 +1,7 @@
 import { About } from "./About";
 import { Features } from "./Features";
 import { Hero } from "./Hero";
+import { Review } from "../reviews/Review";
 
 export const HomePage = () => {
   return (
@@ -33,6 +34,7 @@ export const HomePage = () => {
           { text: "Foldable and portable with carrying case" },
         ]}
       />
+      <Review />
     </div>
   );
 };
