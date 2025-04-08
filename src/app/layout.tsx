@@ -4,6 +4,7 @@ import "./globals.css";
 import { ResponsiveNav } from "./components/navbar/ResponsiveNav";
 import { Provider } from "./components/hoc/Provider";
 import { Footer } from "./components/home/Footer";
+import { ScrollToTop } from "./components/helper/ScrollToTop";
 
 const font = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -27,6 +28,7 @@ export default function RootLayout({
           <ResponsiveNav />
           {children}
         </Provider>
+        <ScrollToTop />
         <Footer />
       </body>
     </html>
