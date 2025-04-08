@@ -1,6 +1,6 @@
 "use client";
 import { navLinks } from "@/app/constant/constant";
-import Link from "next/link";
+import { smoothScroll } from "@/app/components/helper/smoothScroll";
 import { useEffect, useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
@@ -37,13 +37,14 @@ export const Navbar = ({ openNav }: Props) => {
         <div className="hidden lg:flex items-center justify-center w-full">
           <div className="flex items-center space-x-10">
             {navLinks.map((link) => (
-              <Link
+              <a
                 href={link.url}
                 key={link.id}
+                onClick={smoothScroll}
                 className="text-white hover:text-gray-600 font-semibold transition-all duration-200"
               >
                 <p>{link.label}</p>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
