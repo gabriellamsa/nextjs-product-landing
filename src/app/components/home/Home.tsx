@@ -2,6 +2,7 @@ import { About } from "./About";
 import { Features } from "./Features";
 import { Hero } from "./Hero";
 import { Review } from "../reviews/Review";
+import { Contact } from "./Contact";
 
 export const HomePage = () => {
   return (
@@ -35,6 +36,7 @@ export const HomePage = () => {
         ]}
       />
       <Review />
+      <Contact />
     </div>
   );
 };
